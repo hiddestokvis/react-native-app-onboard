@@ -31,7 +31,7 @@ export const OnboardingPages = ({
     ? tinycolor(currentBackgroundColor).darken(30).toString()
     : tinycolor(currentBackgroundColor).lighten(30).toString();
   const color =
-    tinycolor(footerBackgroundColor).getBrightness() > 180
+    props.color || tinycolor(footerBackgroundColor).getBrightness() > 180
       ? tinycolor(footerBackgroundColor).darken(60).toString()
       : tinycolor(footerBackgroundColor).lighten(60).toString();
 
